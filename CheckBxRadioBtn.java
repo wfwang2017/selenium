@@ -70,6 +70,7 @@ public class CheckBxRadioBtn {
 				System.out.println("Test script executed successfully.");
 
 	}
+	/*
 	public static void main(String[] args) {
 		// Create a new instance of the FireFox driver
 		WebDriver driver = new FirefoxDriver();
@@ -132,5 +133,5 @@ public class CheckBxRadioBtn {
 
 	}
 
-
+*/
 }
