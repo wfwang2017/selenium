@@ -8,7 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class CheckBxRadioBtn {
+import org.testng.annotations.Test;
+
+public class CheckBoxRadioBtn {
+	@Test
 	public void checkBxRadioBtn(){
 		// Create a new instance of the FireFox driver
 				WebDriver driver = new FirefoxDriver();
