@@ -1,5 +1,9 @@
 package myMavenProject;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,12 +14,15 @@ public class VisibilityConditions {
 	/**
 	 * @param args
 	 */
-	public static void visibilityTest() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
+	WebDriver driver;
 
+	@BeforeTest
+
+	public void setUp() {
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
 
 		// objects and variables instantiation
-		WebDriver driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 		String appUrl = "https://google.com";
 
 		// launch the firefox browser and open the application url
@@ -23,6 +30,10 @@ public class VisibilityConditions {
 
 		// maximize the browser window
 		driver.manage().window().maximize();
+	}
+
+	@Test
+	public void visibilityTest() {
 
 		// declare and initialize the variable to store the expected title of the webpage.
 		String expectedTitle = "Google";
@@ -60,17 +71,22 @@ public class VisibilityConditions {
 			searchIcon.click();
 		}
 
-		// close the web browser
-		driver.close();
-		System.out.println("Test script executed successfully.");
+	}		
+	/**
+	 * Tear down the setup after test completes
+	 */
 
-		// terminate the program
-		System.exit(0);
+	@AfterTest
+
+	public void tearDown() { 
+		driver.quit();
+		System.out.println("Test VisibilityTest() executed successfully.");
 	}
-/*		
-	}
+
+	/*		
+	
 	public static void main(String[] args) {
-		
+
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
 
 
@@ -127,6 +143,6 @@ public class VisibilityConditions {
 		// terminate the program
 		System.exit(0);
 	}
-	*/
+	 */
 }
 

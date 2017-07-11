@@ -27,7 +27,7 @@ public class DemoWebAlert {
 
 	@BeforeTest
 	public void setUp() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
 
 		driver=new FirefoxDriver();
 		// Opened the application
@@ -73,5 +73,6 @@ public class DemoWebAlert {
 	@AfterTest
 	public void tearDown() {             
 		driver.quit();
+		System.out.println("Test TestWebAlert executed successfully.");
 	}
 }

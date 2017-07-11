@@ -14,11 +14,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DemoWindowAlert {
 	WebDriver driver;
+	
 	@BeforeTest
-
 	public void setUp()
 	{
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
 
 		driver=new FirefoxDriver();
 		driver.get("https://gmail.com");
@@ -92,7 +92,8 @@ public class DemoWindowAlert {
 	@AfterTest
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
+		System.out.println("Test testWindowAlert executed successfully.");
 	}
 }
 

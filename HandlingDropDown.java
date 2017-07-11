@@ -31,7 +31,7 @@ public class HandlingDropDown {
 	@BeforeTest
 
 	public void setUp() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\Wang\\Desktop\\Selenium_training\\firefoxDriver\\geckodriver.exe");   
 
 		driver=new FirefoxDriver();
 
@@ -92,6 +92,6 @@ public class HandlingDropDown {
 
 	public void tearDown() { 
 		driver.quit();
-		System.out.println("Test script executed successfully.");
+		System.out.println("Test TestSelectFunctionality executed successfully.");
 	}
 }
